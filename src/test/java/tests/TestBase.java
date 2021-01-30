@@ -23,7 +23,6 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = "https://user1:1234@" + System.getProperty("remote.browser.url") + ":4444/wd/hub/";
-        Configuration.startMaximized = true;
     }
 
     @AfterEach
@@ -33,6 +32,7 @@ public class TestBase {
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
         attachVideo();
+
         closeWebDriver();
     }
 
