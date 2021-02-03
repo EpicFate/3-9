@@ -20,13 +20,12 @@ public class TestBase {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("browserVersion", "88.0");
+        capabilities.setBrowserName("chrome");
+        capabilities.setVersion("88.0");
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = "https://localhost:4444/wd/hub/";
+        Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.startMaximized = true;
-
     }
 
     @AfterEach
@@ -39,5 +38,4 @@ public class TestBase {
 
         closeWebDriver();
     }
-
 }
