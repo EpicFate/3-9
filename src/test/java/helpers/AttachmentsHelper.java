@@ -45,8 +45,7 @@ public class AttachmentsHelper {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 
-    public static String getConsoleLogs() {
-        return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
-    }
+    public static String getConsoleLogs() { return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
 
+    }
 }

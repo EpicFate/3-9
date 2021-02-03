@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class PracticeForm extends TestBase {
+public class PracticeForm extends TestBase{
     @Test
     @Owner("EpicFate")
     @DisplayName("Регистрация студента")
